@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>فيلا مستقلة في الرحاب - أقل سعر</title>
+  <meta name="description" content="اقل سعر فيلا مستقلة متشطبة بالكامل في الرحاب - موقع مميز. 4 غرف، 4 حمامات، 520 متر مربع. للبيع." />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#101824;
+      --card2:#0f141c;
+      --text:#eaf0fb;
+      --muted:#a9b6cc;
+      --line:rgba(255,255,255,.10);
+      --accent:#6ea8ff;
+      --accent2:#7ef0c1;
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 650px at 20% 0%, #15263e, var(--bg));
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .container{max-width:var(--max);margin:0 auto;padding:20px 16px 60px}
+    header{
+      position:sticky;top:0;z-index:30;
+      background:rgba(11,15,20,.72);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .nav{
+      max-width:var(--max);margin:0 auto;padding:12px 16px;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .navlinks{display:flex;gap:8px;flex-wrap:wrap}
+    .navlinks a{
+      text-decoration:none;color:var(--muted);font-size:14px;
+      padding:8px 10px;border-radius:12px;
+    }
+    .navlinks a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(135deg, rgba(110,168,255,.20), rgba(126,240,193,.10));
+      color:var(--text);
+      padding:10px 12px;border-radius:14px;
+      text-decoration:none;font-weight:700;font-size:14px;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .btn2{
+      display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:10px 12px;border-radius:14px;
+      text-decoration:none;font-weight:700;font-size:14px;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroMedia{
+      position:relative;
+      min-height:320px;
+      background:#000;
+    }
+    .heroMedia img{
+      width:100%;height:100%;object-fit:cover;display:block;
+      filter:saturate(1.05) contrast(1.02);
+    }
+    .badge{
+      position:absolute;top:14px;right:14px;
+      background:rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.14);
+      padding:8px 10px;border-radius:999px;
+      font-size:13px;color:#fff;
+    }
+    .heroInfo{padding:18px}
+    h1{margin:0 0 10px;font-size:24px;line-height:1.3}
+    .sub{color:var(--muted);margin:0 0 14px}
+    .priceRow{
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+      padding:12px;border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      margin:14px 0 16px;
+    }
+    .price{
+      font-size:22px;font-weight:900;
+      letter-spacing:.2px;
+    }
+    .price small{display:block;color:var(--muted);font-weight:600;font-size:13px;margin-top:2px}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .specGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:10px;
+    }
+    @media (max-width: 520px){
+      .specGrid{grid-template-columns:1fr}
+    }
+    .spec{
+      padding:12px;border-radius:16px;
+      background:rgba(0,0,0,.20);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .spec b{display:block;font-size:15px}
+    .spec span{color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{margin-top:18px}
+    .sectionTitle{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      margin:0 0 10px;
+    }
+    h2{margin:0;font-size:18px}
+    .muted{color:var(--muted)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width: 920px){
+      .grid2{grid-template-columns:1fr}
+    }
+    .panel{padding:16px}
+    ul.clean{margin:0;padding:0 18px}
+    ul.clean li{margin:8px 0;color:var(--text)}
+    .kv{
+      display:grid;grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+    @media (max-width: 520px){
+      .kv{grid-template-columns:1fr}
+    }
+    .kv div{
+      padding:12px;border-radius:16px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .kv div small{color:var(--muted);display:block;margin-bottom:4px}
+    .table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .table th,.table td{
+      padding:12px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      text-align:right;
+      font-size:14px;
+      vertical-align:top;
+    }
+    .table th{background:rgba(255,255,255,.05);color:var(--muted);font-weight:800}
+    .table tr:last-child td{border-bottom:none}
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:10px;
+      padding:16px;
+    }
+    @media (max-width: 980px){ .gallery{grid-template-columns: repeat(3, 1fr);} }
+    @media (max-width: 680px){ .gallery{grid-template-columns: repeat(2, 1fr);} }
+    .thumb{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:#000;
+      cursor:pointer;
+      min-height:120px;
+    }
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.96}
+    .thumb:hover img{transform:scale(1.03);transition:.25s ease}
+    .thumb::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, transparent, rgba(0,0,0,.35));
+      pointer-events:none;
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed;inset:0;display:none;z-index:60;
+      background:rgba(0,0,0,.78);
+      backdrop-filter: blur(6px);
+      align-items:center;justify-content:center;
+      padding:18px;
+    }
+    .lightbox.open{display:flex}
+    .lightboxContent{
+      width:min(1100px, 100%);
+      background:rgba(16,24,36,.92);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .lightboxTop{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:12px 12px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .lightboxTop .title{color:var(--muted);font-size:13px}
+    .iconbtn{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:8px 10px;border-radius:12px;
+      cursor:pointer;font-weight:800;
+    }
+    .lightboxMain{
+      position:relative;
+      background:#000;
+      max-height:70vh;
+    }
+    .lightboxMain img{
+      width:100%;
+      height:70vh;
+      object-fit:contain;
+      display:block;
+      background:#000;
+    }
+    .navbtn{
+      position:absolute;top:50%;
+      transform:translateY(-50%);
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.35);
+      color:#fff;
+      width:42px;height:42px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;
+      user-select:none;
+    }
+    .navbtn:hover{background:rgba(0,0,0,.55)}
+    .prev{right:12px}
+    .next{left:12px}
+
+    /* Footer */
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+      padding-top:16px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    /* Floating CTA */
+    .floating{
+      position:fixed;
+      bottom:16px;
+      left:16px;
+      display:flex;
+      gap:10px;
+      z-index:70;
+    }
+    @media (max-width: 520px){
+      .floating{left:12px;right:12px;justify-content:space-between}
+      .floating a{flex:1}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>إعلان عقاري — فيلا الرحاب</span>
+      </div>
+      <div class="navlinks">
+        <a href="#photos">الصور</a>
+        <a href="#details">التفاصيل</a>
+        <a href="#payment">شروط الدفع</a>
+        <a href="#contact">التواصل</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card heroMedia">
+        <span class="badge">للبيع • جاهز للسكن</span>
+        <img src="30750496-800x600.jpeg" alt="واجهة الفيلا" />
+      </div>
+
+      <div class="card heroInfo">
+        <h1>اقل سعر فيلا مستقلة متشطبة بالكامل في الرحاب - موقع مميز</h1>
+        <p class="sub">مدينة الرحاب، القاهرة الجديدة، القاهرة (Al Rehab City, New Cairo, Cairo)</p>
+
+        <div class="priceRow">
+          <div class="price">
+            28,000,000 ج.م
+            <small>(28,000,000 EGP)</small>
+          </div>
+          <span class="pill">المساحة: 520 م²</span>
+          <span class="pill">4 غرف</span>
+          <span class="pill">4 حمامات</span>
+        </div>
+
+        <div class="specGrid">
+          <div class="spec">
+            <b>نوع العقار</b>
+            <span>فيلا</span>
+          </div>
+          <div class="spec">
+            <b>حالة البناء</b>
+            <span>جاهز</span>
+          </div>
+          <div class="spec">
+            <b>نوع العرض</b>
+            <span>للبيع</span>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+          <a class="btn" href="#contact">📞 تواصل الآن</a>
+          <a class="btn2" href="#payment">💳 شروط الدفع</a>
+          <button class="btn2" id="shareBtn" type="button">🔗 مشاركة الإعلان</button>
+        </div>
+
+        <p class="muted" style="margin:14px 0 0">
+          نُشر في: 20 أكتوبر 2025
+        </p>
+      </div>
+    </div>
+
+    <!-- PHOTOS -->
+    <section id="photos" class="card">
+      <div class="panel sectionTitle">
+        <h2>معرض الصور</h2>
+        <div class="muted">اضغط على أي صورة للتكبير</div>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <!-- Thumbnails (order matters) -->
+        <div class="thumb" data-src="30750496-800x600.jpeg"><img src="30750496-800x600.jpeg" alt="صورة 1"></div>
+        <div class="thumb" data-src="30750497-800x600.jpeg"><img src="30750497-800x600.jpeg" alt="صورة 2"></div>
+        <div class="thumb" data-src="30750498-800x600.jpeg"><img src="30750498-800x600.jpeg" alt="صورة 3"></div>
+        <div class="thumb" data-src="30750499-400x300.jpeg"><img src="30750499-400x300.jpeg" alt="صورة 4"></div>
+        <div class="thumb" data-src="30750501-800x600.jpeg"><img src="30750501-800x600.jpeg" alt="صورة 5"></div>
+        <div class="thumb" data-src="30750504-800x600.jpeg"><img src="30750504-800x600.jpeg" alt="صورة 6"></div>
+        <div class="thumb" data-src="30750506-800x600.jpeg"><img src="30750506-800x600.jpeg" alt="صورة 7"></div>
+        <div class="thumb" data-src="30750508-800x600.jpeg"><img src="30750508-800x600.jpeg" alt="صورة 8"></div>
+        <div class="thumb" data-src="30750515-800x600.jpeg"><img src="30750515-800x600.jpeg" alt="صورة 9"></div>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section id="details" class="grid2">
+      <div class="card panel">
+        <div class="sectionTitle">
+          <h2>نبذة سريعة</h2>
+          <span class="muted">الرحاب 1</span>
+        </div>
+
+        <ul class="clean">
+          <li>فيلا مستقلة متشطبة بالكامل في الرحاب</li>
+          <li>فلل مستقلة للبيع في الرحاب</li>
+          <li>الرحاب 1</li>
+        </ul>
+
+        <div class="kv">
+          <div>
+            <small>الموقع</small>
+            مدينة الرحاب، القاهرة الجديدة، القاهرة
+          </div>
+          <div>
+            <small>المواصفات</small>
+            4 غرف • 4 حمامات • 520 م²
+          </div>
+          <div>
+            <small>حالة البناء</small>
+            جاهز
+          </div>
+          <div>
+            <small>نوع العرض</small>
+            للبيع
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:12px">
+          * يمكن إضافة وصف تفصيلي هنا لاحقًا (مثل تقسيمة الأدوار، عدد الريسبشن، الحديقة، إلخ).
+        </p>
+      </div>
+
+      <div class="card panel">
+        <div class="sectionTitle">
+          <h2>معلومات عن العقار</h2>
+          <span class="muted">Property Information</span>
+        </div>
+
+        <table class="table">
+          <tr>
+            <th>البند</th>
+            <th>القيمة</th>
+          </tr>
+          <tr>
+            <td>نوع العقار</td>
+            <td>فيلا</td>
+          </tr>
+          <tr>
+            <td>حالة البناء</td>
+            <td>جاهز</td>
+          </tr>
+          <tr>
+            <td>نوع العرض</td>
+            <td>للبيع</td>
+          </tr>
+          <tr>
+            <td>عدد الغرف</td>
+            <td>4 غرف</td>
+          </tr>
+          <tr>
+            <td>عدد الحمامات</td>
+            <td>4 حمامات</td>
+          </tr>
+          <tr>
+            <td>المساحة</td>
+            <td>520 متر مربع</td>
+          </tr>
+          <tr>
+            <td>تاريخ النشر</td>
+            <td>20 أكتوبر 2025</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- PAYMENT -->
+    <section id="payment" class="card panel">
+      <div class="sectionTitle">
+        <h2>شروط الدفع</h2>
+        <span class="muted">Payment Terms</span>
+      </div>
+
+      <table class="table">
+        <tr>
+          <th>الخيار</th>
+          <th>التفاصيل</th>
+        </tr>
+        <tr>
+          <td><b>كاش</b></td>
+          <td>28,000,000 EGP</td>
+        </tr>
+        <tr>
+          <td><b>تقسيط (سنة واحدة)</b></td>
+          <td>
+            إجمالي: 30,000,000 EGP<br/>
+            مقدم: 15,000,000 EGP<br/>
+            ربع سنوي: 5,000,000 EGP
+          </td>
+        </tr>
+      </table>
+
+      <p class="muted" style="margin:12px 0 0">
+        * الشروط قابلة للتأكيد النهائي عند التواصل.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card panel">
+      <div class="sectionTitle">
+        <h2>التواصل</h2>
+        <span class="muted">اختر الطريقة المناسبة</span>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <!-- عدّل الأرقام/الروابط هنا -->
+        <a class="btn" href="tel:+201000000000">📞 اتصال</a>
+        <a class="btn" href="https://wa.me/201000000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%8C%20%D9%85%D8%B9%D8%A7%D9%8A%D8%A7%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%81%D9%8A%D9%84%D8%A7%20%D8%A7%D9%84%D8%B1%D8%AD%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%88%D8%B6%D8%A9%20%D9%84%D9%84%D8%A8%D9%8A%D8%B9" target="_blank" rel="noopener">💬 واتساب</a>
+        <a class="btn2" href="mailto:your@email.com?subject=%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%81%D9%8A%D9%84%D8%A7%20%D8%A7%D9%84%D8%B1%D8%AD%D8%A7%D8%A8&body=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%8C%0D%0A%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%81%D9%8A%D9%84%D8%A7%20%D9%88%D9%85%D9%88%D8%B9%D8%AF%20%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9.%0D%0A%D8%B4%D9%83%D8%B1%D8%A7%D9%8B">✉️ بريد</a>
+        <a class="btn2" href="https://www.google.com/maps/search/?api=1&query=Al%20Rehab%20City%20New%20Cairo" target="_blank" rel="noopener">📍 فتح الموقع على الخريطة</a>
+      </div>
+
+      <p class="muted" style="margin-top:12px">
+        غيّر رقم الهاتف والبريد في الكود حسب رغبتك.
+      </p>
+    </section>
+
+    <footer>
+      © إعلان فيلا الرحاب — صفحة عرض مصغّرة (Micro Website)
+    </footer>
+  </main>
+
+  <!-- Floating CTA -->
+  <div class="floating">
+    <a class="btn" href="#photos">🖼️ الصور</a>
+    <a class="btn" href="#contact">📞 تواصل</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightboxContent" role="dialog" aria-modal="true" aria-label="عارض الصور">
+      <div class="lightboxTop">
+        <div class="title" id="lbTitle">صورة</div>
+        <div style="display:flex;gap:8px">
+          <button class="iconbtn" id="downloadBtn" type="button">⬇️ تنزيل</button>
+          <button class="iconbtn" id="closeBtn" type="button">✕ إغلاق</button>
+        </div>
+      </div>
+      <div class="lightboxMain">
+        <div class="navbtn prev" id="prevBtn">›</div>
+        <div class="navbtn next" id="nextBtn">‹</div>
+        <img id="lbImg" src="" alt="صورة مكبرة" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---- Share button ----
+    const shareBtn = document.getElementById("shareBtn");
+    shareBtn?.addEventListener("click", async () => {
+      const url = window.location.href;
+      const title = document.title;
+      const text = "اعلان فيلا مستقلة متشطبة بالكامل في الرحاب - موقع مميز";
+      try{
+        if (navigator.share) {
+          await navigator.share({ title, text, url });
+        } else {
+          await navigator.clipboard.writeText(url);
+          alert("تم نسخ رابط الصفحة ✅");
+        }
+      }catch(e){
+        // fallback
+        try{
+          await navigator.clipboard.writeText(url);
+          alert("تم نسخ رابط الصفحة ✅");
+        }catch(_){
+          prompt("انسخ الرابط:", url);
+        }
+      }
+    });
+
+    // ---- Lightbox gallery ----
+    const thumbs = Array.from(document.querySelectorAll("#gallery .thumb"));
+    const lightbox = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lbImg");
+    const lbTitle = document.getElementById("lbTitle");
+    const closeBtn = document.getElementById("closeBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    const images = thumbs.map(t => t.dataset.src);
+    let idx = 0;
+
+    function openLB(i){
+      idx = i;
+      lbImg.src = images[idx];
+      lbTitle.textContent = `صورة ${idx+1} من ${images.length}`;
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden","false");
+    }
+    function closeLB(){
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden","true");
+      lbImg.src = "";
+    }
+    function prev(){
+      idx = (idx - 1 + images.length) % images.length;
+      lbImg.src = images[idx];
+      lbTitle.textContent = `صورة ${idx+1} من ${images.length}`;
+    }
+    function next(){
+      idx = (idx + 1) % images.length;
+      lbImg.src = images[idx];
+      lbTitle.textContent = `صورة ${idx+1} من ${images.length}`;
+    }
+
+    thumbs.forEach((t, i) => t.addEventListener("click", ()=> openLB(i)));
+    closeBtn?.addEventListener("click", closeLB);
+    prevBtn?.addEventListener("click", prev);
+    nextBtn?.addEventListener("click", next);
+
+    lightbox?.addEventListener("click", (e)=>{
+      if(e.target === lightbox) closeLB();
+    });
+
+    document.addEventListener("keydown", (e)=>{
+      if(!lightbox.classList.contains("open")) return;
+      if(e.key === "Escape") closeLB();
+      if(e.key === "ArrowRight") prev(); // RTL feeling
+      if(e.key === "ArrowLeft") next();
+    });
+
+    downloadBtn?.addEventListener("click", ()=>{
+      const a = document.createElement("a");
+      a.href = images[idx];
+      a.download = images[idx].split("/").pop();
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+  </script>
+</body>
+</html>
